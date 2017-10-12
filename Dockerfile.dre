@@ -1,2 +1,2 @@
 FROM nginx:1.13.5-alpine
-RUN echo "So won't they let you know\nThat if you fuck with Dre, you're fuckin' wit Death Row" > /usr/share/nginx/html/index.html
+COPY dre.html /usr/share/nginx/html/index.html

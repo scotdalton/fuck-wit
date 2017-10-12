@@ -30,8 +30,10 @@ The document has moved
 Starting fuckwit_dre_1 ... done
 
 / # curl google.com
-So won't they let you know\nThat if you fuck with Dre, you're fuckin' wit Death Row
+So won't they let you know
+That if you fuck with Dre, you're fuckin' wit Death Row
 
 / # curl maps.google.com
-So won't they let you know\nThat if you fuck with Dre, you're fuckin' wit Death Row
+So won't they let you know
+That if you fuck with Dre, you're fuckin' wit Death Row
 ```
