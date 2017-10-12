@@ -2,7 +2,9 @@
 
 Fuck with Docker
 
-## Control
+## Curl
+
+### Control
 ```
 ~> docker-compose -f dc.yml run control
 Starting fuckwit_dre_1 ... done
@@ -24,7 +26,7 @@ The document has moved
 </BODY></HTML>
 ```
 
-## Experiment
+### Experiment
 ```
 ~> docker-compose -f dc.yml run experiment
 Starting fuckwit_dre_1 ... done
@@ -37,3 +39,30 @@ That if you fuck with Dre, you're fuckin' wit Death Row
 So won't they let you know
 That if you fuck with Dre, you're fuckin' wit Death Row
 ```
+
+## Chrome
+
+### Setup (OSX)
+
+1.  You need some tools to make the display work
+    ```
+    ~> brew install socat
+    ~> brew cask install xquartz
+    ```
+
+2.  Run XQuartz which should provide an `xterm` window for you
+    ```
+    ~> open -a XQuartz
+    ```
+
+3.  In the XQuartz `xterm` window, some magic byte streaming thing
+    ```
+    % socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+    ```
+
+4.  In another XQuartz `xterm` window, get into the repo directory and run Chrome
+    ```
+    % docker-compose -f dc.yml run experiment
+    ```
+
+5.  Navigate to http://google.com in Chrome

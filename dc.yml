@@ -18,3 +18,14 @@ services:
       - dre:maps.google.com
       - dre:api.maps.google.com
     tty: true
+  chrome:
+    image: jess/chrome
+    environment:
+      DISPLAY: ${DISPLAY}
+    links:
+      - dre:google.com
+      - dre:maps.google.com
+      - dre:api.maps.google.com
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    privileged: true
