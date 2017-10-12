@@ -1,0 +1,20 @@
+version: "3.2"
+services:
+  dre:
+    build:
+      context: .
+      dockerfile: Dockerfile.dre
+  control:
+    build:
+      context: .
+    links:
+      - dre
+    tty: true
+  experiment:
+    build:
+      context: .
+    links:
+      - dre:google.com
+      - dre:maps.google.com
+      - dre:api.maps.google.com
+    tty: true
